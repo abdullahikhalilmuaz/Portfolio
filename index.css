@@ -1,0 +1,993 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+.container #side-nav {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    background-color: rgb(12, 12, 12);
+    transition: .4s;
+    z-index: 10;
+}
+
+.container .main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+svg {
+    width: 20px;
+}
+
+.container #side-nav .title{
+    color: white;
+    text-align: center;
+    margin: 80px auto;
+    padding: 10px 25px;
+    background-color: rgb(12, 12, 12);
+    position: ;
+    z-index: 1;
+}
+
+.title::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    /* background-color: red; */
+}
+
+#side-nav .nav {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: auto;
+    font-size: 12px;
+    margin: 50px auto;
+    color: rgb(134, 133, 133);
+}
+
+.nav ul {
+    list-style: none;
+}
+.nav ul li {
+    margin-top: 12px;
+    border-bottom: 1px solid;
+    padding: 2px 0;
+}
+
+
+.nav ul li svg {
+    width: 13px;
+    fill: rgb(92, 90, 90);
+    margin: 0px 20px 0px 10px;
+}
+
+
+.container .main .one {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    margin-top: -500%;
+    overflow: auto;
+    overflow-x: hidden;
+    transition: 5s;
+}
+
+.main .one.active {
+    margin: 0;
+    transition: .8s ;
+}
+.container .main .two {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    margin-top: -500%;
+    transition: 2s;
+}
+.main .two.active {
+    margin: 0;
+    transition: 1s;
+}
+.container .main .three {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    margin-top: -500%;
+    transition: .4s;
+}
+
+.main .three.active {
+    margin-top: 0%;
+}
+
+.container .main .four {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    /* margin-top: -50%; */
+    margin-top: -500%;
+    transition: .4s;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.main .four::-webkit-scrollbar {
+    width: 5px;
+}
+
+.main .four::-webkit-scrollbar-thumb {
+    background-color: red;
+}
+
+.main .four.active {
+    margin-top: 0%;
+}
+
+.container .main .body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.main .body .details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+
+.details .info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.details .image {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.info {
+    padding: 40px 0;
+}
+
+.info h3 {
+    margin-top: 200px;
+    margin-left: 30px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+}
+
+.info h3 > span {
+    color: red;
+}
+
+.info p {
+    color: rgb(68, 67, 67);
+    font-size: 12px;
+    margin: 10px 30px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.info button {
+    width: 35%;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+    font-size: 11px;
+    background-color: red;
+    margin: 30px 30px;
+    transition: .4s;
+    cursor: pointers;
+}
+
+.info button:hover {
+    letter-spacing: 1px;
+    background-color: rgb(253, 33, 33);
+    transform: scale(1.1);
+}
+
+.details .image .settings {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 60px;
+    background-color: rgba(39, 39, 39, 0.342);
+    border: 1px solid rgba(124, 124, 124, 0.281);
+    border-radius: 5px;
+}
+.image img {
+    margin-left: 10px;
+}
+
+
+/* styling the about content */
+
+.container .main .one .about-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px ;
+    box-sizing: border-box;
+}
+
+.about-details h2 {
+    color: white;
+    margin: 50px 30px;
+    width: 130px;
+    text-align: center;
+    padding: 10px 10px;
+    border-bottom: 2px double red;
+}
+
+.about-details h3 {
+    color: #fff;
+}
+
+.about-details p {
+    font-size: 12px;
+    width: 80%;
+    text-align: justify;
+    color: rgb(102, 101, 101);
+}
+
+.education-skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding: 0px 30px;
+}
+
+.education-skills table {
+    font-size: 12px;
+    color: rgb(199, 194, 194);
+    margin: 0px 10px 0px 0px;
+}
+
+table td {
+    border-bottom: 1px solid rgb(77, 77, 78);
+    padding: 5px 0;
+}
+
+
+.educate {
+    margin-left: 30px;
+}
+.education-skills .education {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(49, 49, 49, 0.404);
+    border: 1px solid rgba(182, 178, 178, 0.514);
+    width: 280px;
+    margin: 0px 0px ;
+    height: 300px;
+    padding: 1px 0px;
+    border-radius: 10px;
+}
+
+
+
+.education .side {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 5px 0;
+}
+
+
+.education .main-content {
+    width: 80%;
+    height: 100%;
+    margin: 0px 10%;
+}
+.education .main-content .first {
+    margin-top: 20px;
+}
+
+.main-content .first span {
+    color: white;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.main-content .first h4 {
+    font-size: 12px;
+    color: white;
+    margin: 3px 0 ;
+}
+
+
+.main-content .first p {
+    color: white;
+    font-size: 10px;
+    font-weight: 100;
+    line-height: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.education .side .circle {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 4px 0;
+}
+
+.side .line {
+    width: 2px;
+    height: 40%;
+    background-color: rgb(255, 30, 0);
+    margin: 0px 0;
+    border-radius: 10px;
+}
+
+.educate h3 {
+    color: rgb(105, 102, 102);
+    margin: 10px ;
+    font-weight: 400;
+    letter-spacing: 3px;    
+}
+
+
+.education-skills .skills {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 30px;
+    margin: 10px 10px;
+    color: white;
+}
+
+.skills .skill-rate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.skill-rate p {
+    font-size: 13px;
+    font-weight: bolder;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.skills .rate {
+    width: 100%;
+    height: 6px;
+    background-color: gray;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.my-skills {
+    margin-top: -10px;
+}
+
+.rate .rate-bar {
+    width: 80%;
+    height: 100%;
+    background-color: red;
+    border-radius: 10px;
+}
+
+
+.education .main-content .second {
+    margin-top: 20px;
+}
+
+.main-content .second span {
+    color: white;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.main-content .second h4 {
+    font-size: 12px;
+    color: white;
+    margin: 3px 0 ;
+}
+
+
+.main-content .second p {
+    color: white;
+    font-size: 10px;
+    font-weight: 100;
+    line-height: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container .main .two {
+    padding: 100px 0;
+}
+.container .main .two  h2 {
+    color: white;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-bottom: 3px solid red;
+    width: 60px;
+    padding-bottom: 5px;
+    margin-left: 30px;
+}
+
+.container .main .two h2::after {
+    content: "";
+    width: 30px;
+    border-bottom: 3px solid red;
+    position: absolute;
+    padding-bottom: 10px;
+    margin-left: 30px;
+}
+
+.container .main .two h3 {
+    color: white;
+    margin: 90px 0;
+    font-weight: 400;
+    margin-left: 30px;
+}
+
+.container .main .two .projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 79.3%;
+    height: 379px;
+    margin-top: -80px;
+    padding: 10px 0;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.container .main .two .projects::-webkit-scrollbar {
+    width: 5px;
+}
+.container .main .two .projects::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 10px;
+}
+
+.container .main .two div{
+    width: 253px;
+    height: 160px;
+    background-color: rgba(56, 55, 55, 0.507);
+    border: .6px solid rgba(167, 165, 165, 0.473);
+    border-radius: 3px;
+    margin: 10px 7.2px;
+}
+
+
+.container .main .three h2 {
+    color: white;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 100px 30px;
+    width: 100px;
+    padding: 10px 15px;    
+}
+
+.container .main .three h2::after{
+    width: 20px;
+    position: absolute;
+    content: "";
+    border-bottom: 3px solid red;
+    padding: 10px 15px;
+    margin: -15px 0px;
+}
+
+.container .main .three h2::before {
+    width: 1px;
+    position: absolute;
+    content: "";
+    border-bottom: 3px solid red;
+    padding: 10px 15px;
+    margin: 19px 0px;
+}
+
+.container .main .three .service-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 79.9%;
+    height: 75vh;
+    margin-top: -85px;
+}
+
+.container .main .three .service-container div {
+    width: 30%;
+    height: 250px;
+    background-color: rgba(29, 28, 28, 0.568);
+    margin: 15px auto;
+    border-radius: 10px;
+    border: .5px solid rgba(146, 143, 143, 0.068);
+}
+
+.container .main .four .main-one {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    width: 80%;
+}
+
+.container .main .four .main-one h2 {
+    text-align: left;
+    margin: 100px 0px 0px 30px;
+    width: 130px;
+    padding: 10px 10px;
+}
+.container .main .four .main-one h3 {
+    margin: 10px 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: red;
+}
+
+.container .main .four .main-one h4 {
+    font-size: 11px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin: -5px 0 5px 0;
+}
+
+.container .main .four .main-two {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    height: auto;
+    padding: 10px 10px 10px  0px;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.container .main .four input {
+    background-color: rgba(59, 58, 58, 0.377);;
+}
+
+.container .main .four .main-two div {
+    width: 130px;
+    height: 130px;
+    background-color: rgba(73, 72, 72, 0.37);
+    margin: 5px auto;
+    border-radius: 50%;
+}
+
+.container .main .four .main-three  {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.container .main .four .main-three #input {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.container .main .four .main-three #input input {
+    width: 40%;
+    margin: 10px auto;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(102, 102, 102, 0.226);
+    outline: none;
+}
+
+
+.container .main .four .main-three #subject {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.container .main .four .main-three #subject input {
+    width: 90%;
+    margin: 10px auto;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(102, 102, 102, 0.226);
+    outline: none;
+}
+
+.container .main .four .main-three #message {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.container .main .four .main-three #message textarea {
+    width: 90%;
+    margin: 10px auto;
+    border: none;
+    padding: 30px 30px;
+    border-radius: 20px;
+    background-color: rgba(73, 72, 72, 0.37);
+    border: 1px solid rgba(102, 102, 102, 0.226);
+    outline: none;
+}
+
+.container .main .four .main-three button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    margin: 20px 20px;    
+    transition: .4s;
+    cursor: pointer;
+}
+
+.container .main .four .main-three button:hover {
+    background-color: rgb(252, 49, 49);
+    letter-spacing: 1px;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 990px) {
+    .container #side-nav {
+        width: 100%;
+        margin-left: -100%;
+    }
+
+    #side-nav.active {
+        margin-left: 0%;
+    }
+
+    .body .menu {
+        width: 35px;
+        height: 35px;
+        background-color: rgba(77, 74, 74, 0.472);
+        margin: 100px 30px;
+        padding: 4px 3px 0px 3px;
+        border-radius: 3px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    .menu div {
+        width: 90%;
+        height: 4px;
+        background-color: rgb(187, 185, 185);
+        margin: 4.5px auto;
+        border-radius: 10px;
+    }
+    
+    .main .body .details {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        height: 100%;
+        margin-top: -150px;
+    }
+
+    .main .body .image {
+        display: none;
+    }
+
+    
+.container .main .two div{
+    width: 100%;
+    height: 260px;
+    background-color: rgba(56, 55, 55, 0.507);
+    border: .6px solid rgba(167, 165, 165, 0.473);
+    border-radius: 3px;
+    margin: 10px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .body .details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-top: -200px
+}
+
+.container .main .two .projects {
+    width: 100%;
+    height: 70vh;
+    margin: -80px auto;
+}
+
+.container .main .three .service-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: auto;
+}
+
+.container .main .three .service-container div {
+    width: 90%;
+    height: 450px;
+    background-color: rgba(29, 28, 28, 0.568);
+    margin: 15px auto;
+    border-radius: 10px;
+    border: .5px solid rgba(146, 143, 143, 0.068);
+    margin: 10px auto;
+    border: 1px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+.container .main .four .main-one {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.container .main .four .main-one h2 {
+    text-align: left;
+    margin: 100px 0px 0px 30px;
+    width: 130px;
+    padding: 10px 10px;
+}
+.container .main .four .main-one h3 {
+    margin: 10px 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: red;
+}
+
+.container .main .four .main-one h4 {
+    font-size: 11px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin: -5px 0 5px 0;
+}
+
+.container .main .four .main-two {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding: 10px 10px 10px  0px;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.container .main .four input {
+    background-color: rgba(59, 58, 58, 0.377);;
+}
+
+.container .main .four .main-two div {
+    width: 130px;
+    height: 130px;
+    background-color: rgba(73, 72, 72, 0.37);
+    margin: 5px auto;
+    border-radius: 50%;
+}
+
+.container .main .four .main-three  {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+}
+/* 
+.container .main .four .main-three #input {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.container .main .four .main-three #input input {
+    width: 40%;
+    margin: 10px auto;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(102, 102, 102, 0.226);
+    outline: none;
+}
+
+
+.container .main .four .main-three #subject {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.container .main .four .main-three #subject input {
+    width: 90%;
+    margin: 10px auto;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(102, 102, 102, 0.226);
+    outline: none;
+}
+
+.container .main .four .main-three #message {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.container .main .four .main-three #message textarea {
+    width: 90%;
+    margin: 10px auto;
+    border: none;
+    padding: 30px 30px;
+    border-radius: 20px;
+    background-color: rgba(73, 72, 72, 0.37);
+    border: 1px solid rgba(102, 102, 102, 0.226);
+    outline: none;
+}
+
+.container .main .four .main-three button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    margin: 20px 20px;    
+    transition: .4s;
+    cursor: pointer;
+}
+
+.container .main .four .main-three button:hover {
+    background-color: rgb(252, 49, 49);
+    letter-spacing: 1px;
+    transform: scale(1.1);
+} */
+}
